@@ -1,9 +1,9 @@
 import cv2
 import matplotlib.pyplot as plt
 
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(0)  #0 is passed for primary camera you can change it with external camera by passing 1 2 ..
 
-success,pic =camera.read()
+success,pic =camera.read()  #starts camera of your system
 
 camera.release()
 
@@ -14,7 +14,7 @@ if(success):
 	print(pic.shape)
 	
 
-face_model = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+face_model = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")  #detect faces
 faces = face_model.detectMultiScale(pic)
 
 print(faces)
