@@ -1,2 +1,2 @@
 # face-detection
-Face detection using cv2 in python
+Face detection using OpenCV in python
