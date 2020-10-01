@@ -2,7 +2,7 @@ import cv2
 
 face_model = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
-class Camera():
+class camera():
     def __init__(self):
         self.camera = cv2.VideoCapture(0)
     
