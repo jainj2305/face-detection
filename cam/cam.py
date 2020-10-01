@@ -2,12 +2,15 @@ import cv2
 
 face_model = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
-class camera():
+class Camera():
     def __init__(self):
         self.camera = cv2.VideoCapture(0)
     
     def __del__(self):
         self.camera.release()
+        
+    def __repr__(self):
+        return "This is a camera object"
 
     def tracker(self):
         success,pic =self.camera.read()
