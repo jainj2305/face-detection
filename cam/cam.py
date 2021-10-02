@@ -8,7 +8,10 @@ class camera():
     
     def __del__(self):
         self.camera.release()
-
+        
+    def __repr__(self):
+        return "This is a camera object"
+a = 69
     def tracker(self):
         success,pic =self.camera.read()
         faces = face_model.detectMultiScale(pic)
